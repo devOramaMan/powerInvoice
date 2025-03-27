@@ -25,7 +25,7 @@ def load_bounding_boxes():
 helpstr="""
 Calculate user usage and cost distribution. 
 
-Example: python ./account/account_maker_pdf.py [faktura.pdf]
+Example: python ./account_maker_pdf.py [faktura.pdf]
 """
 
 def draw_wrapped_text(c, text, x, y, max_width, font_name="Helvetica", font_size=10, line_spacing=12):
@@ -86,8 +86,8 @@ if __name__ == "__main__":
     # Parse command line arguments
     #print(sys.argv)
     parser = argparse.ArgumentParser(description=helpstr)
-    parser.add_argument("--show", "-s", help="View the pdf", required=False, action="store_true")
-    parser.add_argument("--update", "-u", help="Update the bounding boxes", required=False, action="store_true")
+    parser.add_argument("--show", "-s", help="Make a image with the bounding boxes", required=False, action="store_true")
+    parser.add_argument("--update", "-u", help="Update/adapt the bounding boxes", required=False, action="store_true")
     parser.add_argument("pdf_file", help="Path to the PDF invoice file to process")
     args = parser.parse_args()
 
