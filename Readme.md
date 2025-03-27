@@ -3,7 +3,7 @@
 This project generates a PDF invoice based on user data and extracted information from a PDF file. It uses **ReportLab** for PDF generation, **pdfplumber** for text extraction, and **OpenCV** for bounding box updates.
 
 ## Features
-- Extracts text from specific regions of a PDF using bounding boxes.
+- Extracts text from specific regions of a PDF using bounding boxes. (using https://github.com/arccoder/opencvdragrect?tab=readme-ov-file to handle bounding box)
 - Dynamically replaces placeholders in the invoice template with user data.
 - Generates a formatted PDF invoice.
 - Allows visualization and updating of bounding boxes for text extraction.
