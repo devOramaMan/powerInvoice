@@ -1,0 +1,37 @@
+{
+    "regions": [
+        {
+            "name": "INVOICE_INFO",
+            "comment": "This is the region for invoice information",
+            "page": 0,
+            "boundaries": [
+                420,
+                140,
+                570,
+                360
+            ]
+        },
+        {
+            "name": "INVOICE_PAYMENT",
+            "comment": "This is the region for invoice payment and the last payment date",
+            "page": 0,
+            "boundaries": [
+                28,
+                262,
+                312,
+                342
+            ]
+        },
+        {
+            "name": "INVOICE_CONSUMPTION",
+            "comment": "This is the region for invoice power consumption",
+            "page": 1,
+            "boundaries": [
+                13,
+                81,
+                443,
+                139
+            ]
+        }
+    ]
+}

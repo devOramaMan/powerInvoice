@@ -1,0 +1,7 @@
+{
+    "name": "Jens Meitemark",
+    "gen-info": "As stated in the provided invoice from the electricity provider, the residence at \"##Address\" has used a total of ##usage_tot kWh. Your recorded consumption is ##user_usage kWh. This constitutes ##user_percent of ##cost_tot NOK, which amounts to ##user_cost NOK for you to pay in total.",
+    "usage-info": "Details regarding electricity support and prices are in the invoice, while price history can be found in the web application.",
+    "link": "webInterface.lol",
+    "account": "Payment account: 1234.56.78901 (Please include the invoice month in the message field)"
+}

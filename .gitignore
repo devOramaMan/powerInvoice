@@ -1,0 +1,7 @@
+*.pyc
+.vscode/launch.json
+power_invoice_*.pdf
+INVOICE_*.png
+1021228336.pdf
+1021228336.docx
+~$21228336.docx
