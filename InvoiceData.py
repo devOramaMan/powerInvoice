@@ -31,7 +31,7 @@ def extract_date(value):
 
 def extract_unit(value, unit):
     # Use regex to find the number followed by unit
-    arg =r"(\d{1,3}(?: \d{3})*,\d+)\s*%s" % unit
+    arg =r"(\d{1,3}(?:\s*\d{3})*(?:,\d+)?)\s*%s" % unit
     match = re.search(arg, value, re.IGNORECASE)
     if match:
         # Replace ',' with '.' to convert to a float
@@ -109,7 +109,7 @@ class InvoiceTypes(object):
             self.invoice_deadline = extract_date(extract[20:20+p2])
 
     def parse_total_usage(self, page):
-        idx = find_ignore_case(page , self.TOTAL_USAGE_TEXT + " ")
+        idx = find_ignore_case(page , self.TOTAL_USAGE_TEXT)
         if idx == -1:
             raise ValueError("Missing extract for total usage in the first page")
         extract = page[idx-5:idx+92]

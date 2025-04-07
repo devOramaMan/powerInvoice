@@ -47,7 +47,7 @@ def generate_invoice_pdf(types, user_data):
 
     # Title
     c.setFont("Helvetica-Bold", 16)
-    c.drawString(50, height - 50, f"Invoice for {user_data['name']}")
+    c.drawString(50, height - 50, f"{user_data["heading"]} {user_data['name']}")
 
     # General Information
     c.setFont("Helvetica", 12)
@@ -172,13 +172,15 @@ if __name__ == "__main__":
     user_usage = 600
     types.calculate_user_data(user_usage)
 
-    with open("user.json", "r") as file:
+    with open("user.json", "r", encoding="utf-8" ) as file:
         user_data = json.load(file)
 
         generate_invoice_pdf(types, user_data)
 
     print(f"Name: {types.street}")
     print(f"Total usage: {types.total_usage} {types.USAGE}")
+    print(f"User usage: {types.user_usage} {types.USAGE}")
+    print(f"User percent: {types.user_percent:.2f}%")
 
 
 
